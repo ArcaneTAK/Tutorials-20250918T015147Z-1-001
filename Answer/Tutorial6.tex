@@ -1,0 +1,46 @@
+\begin{enumerate}
+	\item A student has to sit for an examination consisting of 3 questions selected randomly from a list of 100 questions. To pass, he needs to answer all three questions. What is the probability that the student will pass the examination if he knows the answers to 90 questions on the list?
+
+	$$P(\n{pass})=\frac{C^3_{90}}{C^3_{100}}=\frac{704880/6}{970200/6}=\frac{178}{245}\approx0.7265306122$$
+
+	\item Show that $\displaystyle \binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}$. Can you provide an interpretation of this equality?
+
+	\begin{multline*}
+		\binom{n-1}{k}+\binom{n-1}{k-1}
+		=\frac{(n-1)!}{k!(n-1-k)!}+\frac{(n-1)!}{(k-1)!(n-k)!}\\
+		=\frac{(n-1)!(n-k)}{k!(n-k)!}+\frac{(n-1)!k}{k!(n-k)!}
+		=\frac{n!}{k!(n-k)!}=\binom{n}{k}
+		=\binom{n}{k}	
+	\end{multline*}
+
+	Interpretation: to choose $k$ elements from $n$ elements labeled $1,2,3,\dots,n$, either choose $k$ elements from elements $1,2,3,\dots,n-1$ or the element $n$ and $k - 1$ elements from $1,2,3,\dots,n-1$.
+
+
+	\item In a series of 1000 light bulbs, 2\% are defective. What is the probability that among 20 bulbs bought, there are 2 faulty ones?
+
+	Assuming that the 20 light bulbs bought are in the same series, the number of defective light bulbs is $1000\times2\%=20$, the number of non-defective light bulbs is $1000-20=980$.
+	$$P(\n{faulty}\times2)=\frac{C^{2}_{20}C^{18}_{980}}{C^{20}_{1000}}\approx0.0519342429872$$
+
+	\item A menu has 5 appetizers, 3 soups, 7 main courses, 6 salad dressings and 8 desserts. In how many ways can a full meal be chosen? In how many ways can a meal be chosen if either an appetizer or a soup is ordered, but not both?
+
+	\begin{itemize}
+		\item (i) Full meal (one from each category): $5\times3\times7\times6\times8 = 5040$
+		\item (ii) Either an appetizer or a soup (but not both): $(5+3)\times7\times6\times8 = 2688$ 
+	\end{itemize}
+
+	\item In how many ways can 6 people sit in 6 seats in a line at a cinema? In how many ways can the 6 people sit around a dinner table eating pizza after the movie?
+
+	\begin{itemize}
+		\item In a line: $6! = 720$
+		\item Around a table (seats are labeled/ ordered): $6! = 720$
+		\item Around a table (only the order of people are considered, i.e. 123456 = 612345): Seats 1 person and seats the others based on the first person: $1 \times 5! =120$
+	\end{itemize}
+
+	\item Is it true that the number of ways of choosing five different letters from the alphabet is more than the number of seconds in a year?
+
+	\begin{itemize}
+		\item Number of ways to choose five different letters is $C^5_{26}=65780$
+		\item Number of seconds in a (non-leap) year is $365\times 24\times 3600 = 31536000$
+	\end{itemize}
+	Since $65780 < 31536000$, the statement is False
+\end{enumerate}

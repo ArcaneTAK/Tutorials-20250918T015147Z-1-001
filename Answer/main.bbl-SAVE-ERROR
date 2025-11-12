@@ -1,0 +1,53 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{siegrist2020:transformations}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b72132313805fff9bd1fb6832abe2a4d}{%
+           family={Siegrist},
+           familyi={S\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {LibreTexts Statistics}%
+      }
+      \strng{namehash}{b72132313805fff9bd1fb6832abe2a4d}
+      \strng{fullhash}{b72132313805fff9bd1fb6832abe2a4d}
+      \strng{fullhashraw}{b72132313805fff9bd1fb6832abe2a4d}
+      \strng{bibnamehash}{b72132313805fff9bd1fb6832abe2a4d}
+      \strng{authorbibnamehash}{b72132313805fff9bd1fb6832abe2a4d}
+      \strng{authornamehash}{b72132313805fff9bd1fb6832abe2a4d}
+      \strng{authorfullhash}{b72132313805fff9bd1fb6832abe2a4d}
+      \strng{authorfullhashraw}{b72132313805fff9bd1fb6832abe2a4d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_%28Siegrist%29/03%3A_Distributions/3.07%3A_Transformations_of_Random_Variables}}
+      \field{note}{[Online; accessed 22-December-2023]}
+      \field{title}{{Transformations of Random Variables}}
+      \field{year}{2020}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

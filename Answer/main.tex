@@ -1,0 +1,76 @@
+\documentclass{article}
+
+% --- Variables
+\newcommand{\semester}{Winter 2025}
+\newcommand{\student}{Huynh Le An Khanh}
+\newcommand{\assignment}{Tutorial 15}
+\newcommand{\department}{CSE}
+\newcommand{\class}{Mathematics for CS}
+\newcommand{\university}{Vietnamese-German University}
+\newcommand{\place}{Binh Duong, Vietnam}
+
+% --- Remapping
+\newcommand{\n}{\text}
+
+% \date{January 14, 2025}
+
+% --- Packages
+% Math
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+% Drawing
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[export]{adjustbox}
+% Fonts
+\usepackage{amssymb}
+\usepackage{fix-cm} 
+% Page
+\usepackage[inline]{enumitem}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{biblatex}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\usepackage[margin = 3cm, includehead]{geometry}
+
+% --- Page Settings ---
+% Fancyhdr
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\includegraphics[height = 0.03\textheight,valign=b]{Trisignature.jpg} Vo Nguyen Minh Tri}
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\semester}
+
+\makeatletter
+\AtBeginDocument{
+    \begin{flushright}
+        \sf{\student} \\
+        \emph{\university} \\
+        {\protect\emph{\place}}\\
+        [0.5\baselineskip]\bf{\@date}
+    \end{flushright}
+    \hfill\\
+    \textbf{\assignment\ - \class}
+}
+    
+\AtEndDocument{
+    \vfill
+    \noindent \sl{Done by \student\ on \@date.}
+}
+\makeatother
+
+% \bibliography{refs.bib}
+
+\begin{document}
+\input{Tutorial15.tex}
+\end{document}

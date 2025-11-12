@@ -1,0 +1,58 @@
+\begin{enumerate}
+    \item Two cards are chosen from a pack of cards without replacement. Calculate the probabilities:
+    \begin{enumerate}
+        \item Both are picture cards.
+        \item Both are from red suits.
+        \item One card is from a red suit and one card is from a black suit.
+    \end{enumerate}
+    Repeat the above calculation when the second drawing is made with replacement.\\
+    Compare your answers in the 2 cases.\\
+    Assuming it's a regular 52 cards deck, the probabilities without replacement is:
+    \begin{enumerate}
+        \item $\displaystyle P(\n{Both are picture cards})=\frac{12\times11}{52\times51}=11/221$.
+        \item $\displaystyle P(\n{Both are from red suits})=\frac{26\times25}{52\times51}=25/102$.
+        \item $\displaystyle P(\n{One card is from a red suit and one card is from a black suit})=\frac{2\times26\times26}{52\times51}=26/51$
+    \end{enumerate}
+    Assuming it's a regular 52 cards deck, the probabilities with replacement is:
+    \begin{enumerate}
+        \item $\displaystyle P(\n{Both are picture cards})=\frac{12}{52}\times\frac{12}{52}=9/169$.
+        \item $\displaystyle P(\n{Both are from red suits})=\frac{26}{52}\times\frac{26}{52}=1/4$.
+        \item $\displaystyle P(\n{One card is from a red suit and one card is from a black suit})=1\times\frac{26}{52}=1/2$
+    \end{enumerate}
+    The chances of drawing two cards of the same types are greater with replacement, while the probability of drawing two cards of the different types is less.
+    
+
+    \item Show that if the events A and B are independent events $(A\perp B)$, then so are the events
+    \begin{enumerate}
+        \item $A$ and $B'$
+        $$A \perp B \Leftrightarrow P(A\cap B) = P(A)P(B)$$ $$\Leftrightarrow P(A\cap B') = P(A) - P(A\cap B) = P(A) - P(A)P(B) = P(A)P(B') \Leftrightarrow A\perp B'$$
+        \item $A'$ and $B$ This is (a) but A and B are swapped.
+        \item $A'$ and $B'$
+        Since $A\perp B$ then $A\perp B'$. Let $C$ be $A$ and $D$ be $B'$. Due to (b), $C'\perp D$ or $A'\perp B'$
+    \end{enumerate}
+
+
+    \item Suppose that an insurance company insures its clients for flood damage to the property.\\
+    Can the company reasonably expect that the claims from its clients will be independent of each other?\\
+    No, if on client has flood damage, it is likely flooding and hence likely for others to have flood damage.
+
+    \item \begin{enumerate}
+        \item If a fair die is rolled 5 times, what is the probability that the numbers obtained are all even numbers?
+        $$P(\n{even} \times 5) = P(\n{even})^5 = (1/2)^5 = 1/32$$
+        \item If a fair die is rolled 3 times, what is the probability that the 3 numbers obtained are all different?\\
+        The number of ways to get 3 different numbers from 3 rolls: $A_6^3 = 120$\\
+        Since all rolls are equally likely: 
+        $$P(\n{3 numbers obtained are all different}) = \frac{120}{6^3} = 5/9$$
+    \end{enumerate}
+
+
+    \item  Consider the network given in the figure with three switches. Suppose that the switches operate independently of each other and that switch 1 allows a message through with probability 0.88, switch 2 allows a message through with probability 0.92 and switch 3 allows a message through with probability 0.90. What is the probability that a message will find a route through the network?\\
+    The probability of the message passing through the upper path: $0.88 \times 0.92 = 0.8096$\\ 
+    The probability of the message not passing through either paths: $(1 - 0.8096) \times (1 - 0.9) = 0.01904$\\
+    The probability of the message passing through one path (find a route through the network): $0.98096$\\
+    
+    
+    \item (Monty Hall problem, for fun only) Suppose you are on a game show, and you are given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say Door 1, and the host, who knows what is behind the doors, opens another door, say Door 3, which has a goat. He then says to you, "Do you want to pick Door 2?" Is it to your advantage to switch your choice?\\
+    
+    This is a classic problem. Suppose intially, we pick door 1. Since the host show us what's behind door 2 or door 3 is a goat, we know that if only one of door 2 or 3 is goat, we can garuantee that the behind the other door is a car. And since the chance of there being only one goat behind both door 2 or 3 are 2/3, the chances to pick the door with the car is: $2/3 \times 1 + 1/3 \times 0 = 2/3$.
+\end{enumerate}

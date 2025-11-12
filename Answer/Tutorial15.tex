@@ -1,0 +1,96 @@
+\begin{enumerate}
+    \item Suppose that $X \sim N(3.2, 6.5)$, $Y \sim N(-2.1, 3.5)$ and $Z \sim N(12, 7.5)$ are independent random variables. Find the probability that
+    \begin{enumerate}
+        \item $X + Y \ge 0$\\
+        Since $X+Y \sim N(3.2-2.1,6.5+3.5)=N(1.1,10)$
+        $$P(X + Y \ge 0)=1-P(X+Y<0) = 1-\Phi\left(\frac{0 - 1.1}{\sqrt{10}}\right) \approx 0.636023785195$$
+
+        \item $X + Y - 2Z \le -20$\\
+        Since $X+Y-2Z \sim N(3.2 - 2.1 - 2\times12,6.5 + 3.5 + 2^2(7.5)) = N(-22.9,40.5)$
+        $$P(X + Y - 2Z \le -20) = \Phi\left(\frac{-20 - (-22.9)}{\sqrt{40.5}}\right) \approx 0.675693915837$$
+
+        \item $3X + 5Y \ge 1$\\
+        Since $3X+5Y \sim N(3(3.2) + 5(-2.1),3^2(6.5) + 5^2(3.5)) = N(-0.9,146)$
+        \begin{multline*}
+            P(3X + 5Y \ge 1)=1-P(3X + 5Y<1)= 1-\Phi\left(\frac{1 - (-0.9)}{\sqrt{146}}\right)\approx0.437525835439            
+        \end{multline*}
+
+        \item $4X - 4Y + 2Z \le 25$\\
+        Since $4X - 4Y + 2Z\sim N(4(3.2) - 4(-2.1) + 2(12),4^2(6.5) + 4^2(3.5) + 2^2(7.5)) = N(45.2, 190)$
+        $$P(4X - 4Y + 2Z \le 25) = \Phi\left(\frac{25 - 45.2}{\sqrt{190}}\right)=0.0713974528747$$
+
+        \item $|X + 6Y + Z| \ge 2$\\
+        Since $X + 6Y + Z\sim N(3.2 + 6(-2.1) + 12,6.5 + 6^2(3.5) + 7.5) = N(2.6, 140)$
+        $$P(|X + 6Y + Z| \ge 2)= 1-\Phi\left(\frac{2 - 2.6}{\sqrt{140}}\right)+\Phi\left(\frac{-2 - 2.6}{\sqrt{140}}\right)\approx0.868944192685$$
+
+        \item $|2X - Y - 6| \le 1$\\
+        Since $2X - Y - 6\sim N(2(3.2) - (-2.1) - 6, 4(6.5) + (3.5)) = N(2.5, 29.5)$
+        \begin{multline*}
+            P(|2X - Y - 6| \le 1) = P(2X - Y - 6 \le 1)-P(2X - Y - 6 \le -1)\\
+            =\Phi\left(\frac{1 - 2.5}{\sqrt{29.5}}\right)-\Phi\left(\frac{-1 - 2.5}{\sqrt{29.5}}\right)\approx0.131550514394
+        \end{multline*}
+    \end{enumerate}
+
+    \item Let $X_1, \ldots, X_{15}$ be independent identically distributed $N(4.5, 0.88)$ random variables, with an average $\bar{X}$.
+    \begin{enumerate}
+        \item Calculate $P(4.2 \le \bar{X} \le 4.9)$\\
+        Since $\bar{X} \sim N(15(4.5),0.88/\sqrt{15})=N(67.5,0.88/\sqrt{15})$
+        $$P(4.2 \le \bar{X} \le 4.9) = \Phi(\frac{4.9 - 4.5}{0.88/\sqrt{15}})- \Phi(\frac{4.2 - 4.5}{0.88/\sqrt{15}}) \approx 0.867334239354$$
+
+        \item Find the value of $c$ for which $P(4.5 - c \le \bar{X} \le 4.5 + c) = 0.99$
+        \begin{multline*}
+            0.99 = P(4.5 - c \le \bar{X} \le 4.5 + c) = \Phi(\frac{c}{0.88/\sqrt{15}})-\Phi(\frac{-c}{0.88/\sqrt{15}})\\
+            = 2\Phi(\frac{c}{0.88/\sqrt{15}}) - 1 \Rightarrow c = 0.88\Phi^{-1}(0.995)/\sqrt{15}\approx0.585267114392            
+        \end{multline*}
+    \end{enumerate}
+
+    \item A piece of wire is cut and the length of the wire has a normal distribution with a mean 7.2 m and a standard deviation 0.11 m. If the piece of wire is then cut exactly in half, what are the mean and the standard deviation of the lengths of the two pieces?\\
+    Each piece has mean $7.2/2 = 3.6$ m, $\sigma = 0.11/2 = 0.055$ m.
+
+    \item Suppose that a fair coin is tossed $n$ times. Estimate the probability that the proportion of heads obtained lies between 0.49 and 0.51 for $n = 100, 200, 500, 1000$ and $2000$.
+    
+    $\bar{X}\sim B(n, p)/n$, $\mu =0.5n/n = 0.5$, $\sigma^2=n(0.5)(0.5)/n^2=0.25n/n^2=0.25/n$
+    Approximating with the normal distribution $Y\sim N\left(0.5, \frac{0.25}{n}\right)$.
+    $$P(0.49 \le \bar{X} \le 0.51) \approx \Phi\left(\frac{0.51 - 0.5}{\sqrt{0.25/n}}\right)-\Phi\left(\frac{0.49 - 0.5}{\sqrt{0.25/n}}\right)$$
+    For each $n$:
+    \begin{align*}
+    n=100: &\quad Z = \pm 0.2 \Rightarrow P \approx 0.158519418878\\
+    n=200: &\quad Z = \pm 0.283 \Rightarrow P \approx 0.22270258921\\
+    n=500: &\quad Z = \pm 0.447 \Rightarrow P \approx 0.345279153981\\
+    n=1000: &\quad Z = \pm 0.632 \Rightarrow P \approx 0.472910743134\\
+    n=2000: &\quad Z = \pm 0.894 \Rightarrow P \approx 0.628906630477
+    \end{align*}
+
+    \item Suppose that a fair die is rolled 1000 times.
+    \begin{enumerate}
+        \item Estimate the probability that the number of 6s is between 150 and 180.\\
+        $X \sim B(1000, \frac{1}{6})$, $\mu = \frac{1000}{6}$, $\sigma = \sqrt{1000(\frac{1}{6})(\frac{5}{6})}$\\
+        Approximating with the normal distribution $Y \sim N\left(\frac{1000}{6}, 1000(\frac{1}{6})(\frac{5}{6})\right)$
+        $$P(150\le X\le 180)\approx \Phi\left(\frac{180.5 - \mu}{\sigma}\right)-\Phi\left(\frac{149.5 - \mu}{\sigma}\right) \approx 0.931843503324$$
+
+        \item What is the smallest value of $n$ for which there is a probability of at least 99\% of obtaining at least 50 6s in $n$ rolls of a fair die?\\
+        Approximating with the normal distribution $Y \sim N\left(\frac{n}{6}, \frac{5n}{36}\right)$
+        $$P\left(X \ge 50\right) \approx 1-\Phi\left(\frac{49.5 - np}{\sqrt{np(1-p)}}\right) = 0.99 \Rightarrow \frac{49.5 - n/6}{\sqrt{5n/36}}\approx \Phi^{-1}(0.01)\Rightarrow n \approx 367.51512$$
+
+    \end{enumerate}
+
+    \item A multiple-choice test consists of a series of questions, each with four possible answers.
+    \begin{enumerate}
+        \item If there are 60 questions, estimate the probability that a student who guesses blindly at each question will get at least 30 questions right.\\
+        $X \sim B(60, 0.25)$, $\mu = 15$, $\sigma = \sqrt{60(0.25)(0.75)}$\\
+        Approximating with the normal distribution $Y\sim N(\mu, \sigma^2)$
+
+        $$P(X \ge 30) \Rightarrow 1-\Phi(\frac{29.5 - 15}{3.354}) \approx 4.8605708347\times10^{-10}$$
+
+        \item How many questions are needed in order to be 99\% confident that a student who guesses blindly at each question scores no more than 35\% on the test?\\
+        Suppose there are $n$ questions.
+        $$0.99 = P(X \le 0.35n) \approx \Phi\left(\frac{0.35n - 0.25n}{\sqrt{n(0.25)(0.75)}}\right)$$
+        $$\Rightarrow \frac{0.35n - 0.25n}{\sqrt{n(0.25)(0.75)}} \approx \Phi^{-1}(0.99) \Rightarrow n = 51$$
+    \end{enumerate}
+
+    \item The lifetimes of batteries are independent with an exponential distribution with a mean of 84 days. Consider a random selection of 350 batteries. What is the probability that at least 55 of the batteries have lifetimes between 60 and 100 days?
+    $$p=P(60 \le D \le 100) = e^{-60/84} - e^{-100/84}$$
+    $X \sim B(350, p)$, $\mu = 350p$, $\sigma = \sqrt{350p(1-p)}$\\
+    Approximating with the normal distribution $Y\sim B(350, p)$
+    $$P(Y \ge 55) \approx 1-\Phi\left(\frac{54.5 - \mu}{\sigma}\right) = 0.978575571147$$
+\end{enumerate}

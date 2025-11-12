@@ -1,0 +1,105 @@
+\begin{enumerate}
+    \item Suppose $Z \sim N(0, 1)$. Find 
+    %$\Phi(x)=erf(x\sqrt2)/2\Rightarrow x=erf^{-1}(2\Phi(x))\sqrt2$
+    \begin{enumerate}
+        \item $P(Z \le 1.34) = \Phi(1.34) \approx 0.909877327536$
+
+        \item $P(Z \ge -0.22) = 1-\Phi(-0.22) \approx 0.587064422648$
+
+        \item $P(-2.19 \le Z \le 0.43) = \Phi(0.43) - \Phi(-2.19) \approx 0.652140060994$
+
+        \item $P(0.09 \le Z \le 1.76) = \Phi(1.76) - \Phi(0.09) \approx 0.424939704127$
+
+        \item $P(|Z| \le 0.38) = \Phi(0.38) - \Phi(-0.38) \approx 0.296054584848$
+
+        \item $P(|Z| \ge 0.91) = \Phi(-0.91) + 1 - \Phi(0.91) \approx 0.362822509784$
+
+        \item The value of x for which $P(Z \le x) = 0.55 \Rightarrow x \approx 0.125661346855$
+        
+        \item The value of $x$ for which $P(Z \ge x) = 0.72 \Rightarrow x = -0.582841507271$
+
+        \item The value of $x$ for which $P(|Z| \le x) = 0.31$
+        Since $P(|X| \le x) > 0 \Rightarrow x \ge 0$
+        $$\Rightarrow 0.31=P(|X|\le x)=\Phi(x)-\Phi(-x)=1-2\Phi(-x) \Rightarrow \Phi(-x) = 0.345 \Rightarrow x = 0.398855$$
+
+        \item The value of $x$ for which $P(|Z| \ge x) = 0.42$
+        Since $P(|X| \ge x) < 1 \Rightarrow x \ge 0$
+        $$\Rightarrow 0.21=P(|Z| \ge x)= \Phi(-x) + 1 - \Phi(x) = 2\Phi(-x) \Rightarrow \Phi(-x)=0.21 \Rightarrow x = 0.8064212$$
+    \end{enumerate}
+
+    \item Suppose $X \sim N(10, 2)$. Find
+    \begin{enumerate}
+        \item $P(X \le 10.34) = \Phi(\frac{10.34 - 10}{2}) \approx 0.567494931675$
+
+        \item $P(X \ge 11.98) = 1-\Phi(\frac{11.98 - 10}{2}) \approx 0.161087059511$
+
+        \item $P(7.67 \le X \le 9.90) =\Phi(\frac{9.90 - 10}{2})-\Phi(\frac{7.67 - 10}{2})\approx 0.358051697742$
+
+        \item $P(10.88 \le X \le 13.22) = \Phi(\frac{13.22 - 10}{2})-\Phi(\frac{10.88 - 10}{2}) \approx 0.276269625512$
+
+        \item $P(|X - 10| \le 3) = P(7\le X\le 13) = \Phi(\frac{13 - 10}{2})-\Phi(\frac{7 - 10}{2}) \approx 0.866385597462$
+
+        \item $P(|X - 10| \ge 8) = \Phi(\frac{18 - 10}{2})-\Phi(\frac{2 - 10}{2}) \approx 0.999936657516$
+        
+        \item The value of $x$ for which $P(X \le x) = 0.81$
+        $$\Rightarrow x = 10 + 2\Phi^{-1}(0.81) \approx 11.7557925901$$
+
+        \item The value of $x$ for which $P(X \ge x) = 0.04$
+        $$\Rightarrow x = 10 + 2\Phi^{-1}(1-0.04) \approx 13.5013721425$$
+
+        \item The value of $x$ for which $P(|X - 10| \ge x) = 0.63$
+        Since $P(|X - 10| \ge x) < 1 \Rightarrow x \ge 0$
+        $$P(|X - 10| \ge x) = 1-P(X - 10 \le x) + P(X - 10 \le -x) = 1-\Phi(x/2)+\Phi(-x/2)=2\Phi(-x/2)$$
+        $$\Rightarrow \Phi(-x/2) = 0.315 \Rightarrow x = -2\Phi^{-1}(0.315) \approx 0.963453699169$$
+
+        \item The value of $x$ for which $P(|X - 10| \le x) = 0.44$
+        Since $P(|X - 10| \le x) > 0 \Rightarrow x \ge 0$
+        $$P(|X - 10| \le x) = P(X - 10 \le x) - P(X - 10 \le -x) = \Phi(x/2)-\Phi(-x/2)=2\Phi(x/2)-1$$
+        $$\Rightarrow 2\Phi(x/2)-1 = 0.44 \Rightarrow x=2\Phi^{-1}(1+0.44)\approx1.16568301454$$
+    \end{enumerate}
+
+    \item Suppose that $X \sim N(\mu, \sigma^2)$ and that
+    $$P(X \le 5) = 0.8 \text{ and } P(X \ge 0) = 0.6.$$
+    What are the values of $\mu$ and $\sigma^2$?
+    \begin{align*}
+    P(X \le 0) = 0.4 &\Rightarrow \frac{0 - \mu}{\sigma} = \Phi^{-1}(0.4) & \Rightarrow \mu + \Phi^{-1}(0.4)\sigma = 0\\
+    P(X \le 5) = 0.8 &\Rightarrow \frac{5 - \mu}{\sigma} = \Phi^{-1}(0.8) &\Rightarrow \mu + \Phi^{-1}(0.8)\sigma = 5
+    \end{align*}
+    Solving the equation gives $\mu \approx 1.15687, \sigma \approx 4.56634$\\
+    Therfore $\sigma^2 = 20.88$
+
+    \item The thicknesses of glass sheets produced by a certain process are normally distributed with
+    a mean of $\mu = 3$ mm and a standard deviation of $\sigma = 0.12$ mm.
+    \begin{enumerate}
+        \item What is the probability that a glass sheet is thicker than 3.2 mm?
+        $$P(X > 3.2) = 1 - P(X<3.2) = 1 - \Phi(\frac{3.2 - 3}{0.12})\approx 0.0477903522728$$
+
+        \item What is the probability that a glass sheet is thinner than 2.7 mm?
+        $$P(X < 2.7) = \Phi(\frac{2.7 - 3}{0.12}) \approx 0.00620966532578 $$
+
+        \item What is the value of $c$ for which there is a 99\% probability that a glass sheet has a
+        thickness within the interval $[3 - c, 3 + c]$?
+        \begin{multline*}
+            P(3 - c\le X\le 3+c) = 1 - 2P(X\le 3-c) = 0.99 \Rightarrow P(X\le3-c) =0.005\\
+            \Rightarrow c = -0.12\Phi^{-1}(0.005) \approx 0.309099516426
+        \end{multline*}
+
+        \item What is the probability that three glass sheets placed one on top of another have a total thickness greater than 9.5 mm?
+        \begin{multline*}
+            \bar{X} \sim N(3, \frac{0.12^2}{3}) \Rightarrow P(3\bar{X} > 9.5) = 1-P(\bar{X} < 9.5/3)\\
+            =1-\Phi(\frac{9.5/3 - 3}{\sqrt{0.12^2/3}}) \approx 0.00807238904718
+        \end{multline*}
+
+        \item What is the probability that seven glass sheets have an average thickness less than 3.1 mm?
+        $$\bar{X} \sim N(3, \frac{0.12^2}{7}) \Rightarrow P(\bar{X} < 3.1)=\Phi(\frac{3.1 - 3}{\sqrt{0.12^2/7}}) \approx 0.986265679807$$
+    \end{enumerate}
+
+    \item The weights of bags filled by a machine are normally distributed with a standard deviation
+    of 0.05 kg and a mean that can be set by the operator. At what level should the mean be
+    set if it is required that only 1\% of the bags weigh less than 10 kg?
+    $$P(X < 10) = 0.01 \Rightarrow \frac{10 - \mu}{0.05} = \Phi(0.01) \Rightarrow \mu = 10 - 0.05\Phi^{-1}(0.01) = 10.1163173937$$
+
+    \item An investment in company A has an expected return of \$30,000 with a standard deviation of \$4000. What is the probability that the return will be at least \$25,000 if it has a normal
+    distribution?
+    $$P(X \ge 25000) = 1-\Phi(\frac{25000 - 30000}{4000}) \approx 0.894350226333$$
+\end{enumerate}

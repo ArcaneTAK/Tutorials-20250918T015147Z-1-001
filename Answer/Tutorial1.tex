@@ -1,0 +1,66 @@
+\begin{enumerate}
+    \item\begin{enumerate}
+        \item What is the sample space when a coin is tossed 3 times?
+        $$\mathcal{S} = \{(x,y,z) | x,y,z\in\{\text{head},\text{tail}\}\}$$
+
+        \item What is the sample space for counting the number of females in a group of $n$ people?
+        $$\mathcal{S}=\{x|0\le x\le n\}$$
+        
+        \item What is the sample space for the number of aces in a hand of 13 playing cards?
+        $$\mathcal{S}=\{x|0\le x\le 4\}$$
+        
+        \item What is the sample space for a person's birthday?
+        \begin{align*}
+            \mathcal{S}=\{
+                \text{Jan 1st}, && \dots, && \text{Jan 31st}\\
+                \text{Feb 1st}, && \dots, && \text{Feb 29th}\\
+                \text{Mar 1st}, && \dots, && \text{Mar 31st}\\
+                \vdots && \vdots && \vdots\\
+                \text{Dec 1st}, && \dots, && \text{Dec 31st}
+            \}
+        \end{align*}
+
+        \item A car repair is performed either on time or late and either satisfactorily or unsatisfactorily. What is the sample space for a car repair?
+        $$\mathcal{S}=\{(x,y)|x\in\{\text{on time,late}\},y\in\{\text{satisfactorily,unsatisfactorily}\}\}$$
+        
+        \item A bag contains balls that are either red or blue and either dull or shiny. What is the sample space when a ball is chosen from the bag?
+        $$\mathcal{S}=\{(x,y)|x\in\{\text{red,blue}\},y\in\{\text{dull,shiny}\}\}$$
+    \end{enumerate}
+    \item A probability value p is often reported as an odds ratio, which is $\displaystyle\frac{p}{1-p}$. This is the ratio of the probability that the event happens to the probability that an event does not happen.
+    \begin{enumerate}
+        \item If the odds ratio is 1, what is p?
+        $$\frac{p}{1-p}=1\Leftrightarrow p = 1 - p \Leftrightarrow p = 0.5$$
+        \item If the odds ratio is 2, what is p?
+        $$\frac{p}{1-p}=2\Leftrightarrow p = 2 - 2p \Leftrightarrow p = 2/3$$
+        \item If p = 0.25, what is the odds ratio?
+        $$\frac{p}{1-p}=\frac{0.25}{1-0.25}=1/3$$
+        \item What are the possible values for the odds ratio?\\
+        Since as $p\to1^-$ : $$\lim_{p\to1^-}{\frac{p}{1-p}}=+\infty$$
+        and with $p=0$ : $\displaystyle\frac{p}{1-p}=0$\\
+        and $\frac{p}{1-p}$ is continuous on $(0,1)$\\
+        Hence $\frac{p}{1-p}$ takes all value in $[0,\infty]$
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item An experiment has 5 outcomes: I, II, III, IV and V. If $P(\n{I})= 0.13$,$P(\n{II})=0.24$,$P(\n{III})=0.07$ and $P(\n{IV})=0.38$, what is $P(\n{V})$?
+        $$P(\n{V}) = 1 - P(\n{I}) - P(\n{II}) - P(\n{III}) - P(\n{IV}) = 1 - 0.13 - 0.24 - 0.07 - 0.38 = 0.18$$
+        \item An experiment has 5 outcomes: I, II, III, IV and V. If $P(\n{I})=0.08$, $P(\n{II})=0.2$, $P(\n{III})=0.33$, what are the possible values for the probability of outcome V? If outcomes IV and V are equally likely, what are their probabilities values?
+        $$2P(\n{V}) = P(\n{V}) + P(\n{IV}) = 1 - P(\n{III}) - P(\n{II}) - P(\n{I}) = 1 - 0.08 - 0.2 - 0.33 = 0.39\\
+        \Rightarrow P(\n{V}) = 0.195$$
+    \end{enumerate}
+    \item An experiment has 3 outcomes: I, II and III. If outcome I is twice likely as outcome II and outcome II is 3 times as likely as outcome III, what are the probability values of the 3 outcomes?
+    \begin{equation*}
+        \begin{cases}
+            P(\n{I})=2P(\n{II})\\
+            P(\n{II})=3P(\n{III})\\
+            P(\n{I}) + P(\n{II}) + P(\n{III}) = 1\\
+        \end{cases}
+        \Rightarrow
+        \begin{cases}
+            P(\n{I}) = 0.6\\
+            P(\n{II}) = 0.3\\
+            P(\n{III}) = 0.1\\
+        \end{cases}
+    \end{equation*}
+    \item A company's advertising expenditure is either low with probability 0.28, average with probability 0.55, or high with probability p. What is p?
+    $$p = 1 - P(\n{low}) - P(\n{average}) = 1 - 0.28 - 0.55 = 0.17$$
+\end{enumerate}

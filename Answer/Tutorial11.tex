@@ -1,0 +1,123 @@
+\begin{enumerate}
+    \item Suppose that the random variables X, Y and Z are independent with $E(X) = 2$, $\n{Var}(X) = 4$, $E(Y) = -3$, $\n{Var}(Y) = 2$, $E(Z) = 8$ and $Var(Z) = 7$. Calculate the expectation and variance of the following random variables.
+    \begin{enumerate}
+        \item $3X+7$
+        $$E(3X+7)=3E(X)+7=3(2)+7=13$$
+        $$\n{Var}(3X+7)=3^2\n{Var}(X)=9(4)=36$$
+
+        \item $4X-3Y$
+        $$E(4X-3Y)=4E(X)-3E(Y)=4(2)-3(-3)=8+9=17$$
+        Since $X$ and $Y$ are independent, $\n{Corr}(X,Z)=0$ and hence
+        $$\n{Var}(4X-3Y)=4^2\n{Var}(X)+(-3)^2\n{Var}(Y)=16(4)+9(2)=64+18=82$$
+
+        \item $5X-9Z+8$
+        $$E(5X-9Z+8)=5E(X)-9E(Z)+8=5(2)-9(8)+8=10-72+8=-54$$
+        Since $X$ and $Z$ are independent, $\n{Corr}(X,Z)=0$ and hence
+        $$\n{Var}(5X-9Z+8)=5^2\n{Var}(X)+(-9)^2\n{Var}(Z)=25(4)+81(7)=100+567=667$$
+
+        \item $X+2Y+3Z$
+        $$E(X+2Y+3Z)=E(X)+2E(Y)+3E(Z)=2+2(-3)+3(8)=2-6+24=20$$
+        Since $X$, $Z$ and $Y$, $Z$ are independent pairs, $X+2Y$, $3Z$ are independent, and since $X$ and $Y$ are independent,
+        \begin{multline*}
+            \n{Var}(X+2Y+3Z)=\n{Var}(X+2Y)+3^2\n{Var}(Z)=\n{Var}(X)+2^2\n{Var}(Y)+3^2\n{Var}(Z)\\
+            =4+4(2)+9(7)=4+8+63=75
+        \end{multline*} 
+    \end{enumerate}
+
+    \item Recall that for any function $g(X)$ of a random variable $X$, 
+    $$E(g(X))=\int g(x)f(x)\,dx$$
+    where $f(x)$ is the probability density function of $X$. Use this result to show that
+    \begin{equation}
+        % \label{eq1}
+        E(aX + b) = aE(X) + b
+    \end{equation}
+    and
+    \begin{equation}
+        % \label{eq2}
+        \n{Var}(aX + b) = a^2\n{Var}(X)        
+    \end{equation}
+    % Proof of \ref{eq1}:
+    \begin{align*}
+        E(aX+b) = \int (ax+b)f(x)\,dx = a\int xf(x)\,dx + b\int f(x)\,dx = aE(X) + b
+    \end{align*}
+    % Proof of \ref{eq2}:
+    \begin{align*}
+        \n{Var}(aX+b) &= E((aX+b)^2) - (E(aX+b))^2 \\
+        &= E(a^2X^2 + 2abX + b^2) - (aE(X)+b)^2 \\
+        &= a^2E(X^2) + 2abE(X) + b^2 - (a^2E(X)^2 + 2abE(X) + b^2) \\
+        &= a^2(E(X^2)-E(X)^2) = a^2\n{Var}(X)
+    \end{align*}
+
+    \item Suppose that components are manufactured such that their heights are independent of each other with $\mu = 65.9$ and $\sigma = 0.32$.
+    \begin{enumerate}
+        \item What are the mean and the standard deviation of the average height of five components?\\
+        Let $\bar{X}$ be the sample mean of 5 independent components.
+        $$E(\bar{X}) = \mu = 65.9$$
+        $$\n{Var}(\bar{X}) = \frac{\sigma^2}{n} = \frac{0.32^2}{5} = 0.02048$$
+        $$\sigma(\bar{X})=\sqrt{\n{Var}(\bar{X})} = \sqrt{0.02048} \approx 0.1431083506$$
+
+        \item If eight components are stacked on top of each other, what are the mean and the standard deviation of the total height?\\
+        Let $T = X_1 + X_2 + \cdots + X_8$
+        $$E(T) = 8\mu = 8(65.9) = 527.2$$
+        $$\n{Var}(T) = 8\sigma^2 = 8(0.32^2) = 0.8192$$
+        $$\sigma(T) = \sqrt{\n{Var}(T)} = \sqrt{0.8192} \approx 0.9050966799$$
+    \end{enumerate}
+
+    \item If \$$x$ is invested in mutual fund A, the annual return has an e$x$pectation of \$0.1$x$ and a standard deviation of \$0.02$x$. If \$$x$ is invested in mutual fund B, the annual return has an e$x$pectation of \$0.1$x$ and a standard deviation of \$0.03$x$. Suppose that the returns on the two funds are independent of each other and that I have \$1000 to invest.
+    \begin{enumerate}
+        \item What are the expectation and variance of my annual return if I invest all my money in fund A?
+        $$E(R_A)=0.1(1000)=100$$
+        $$\n{Var}(R_A)=(0.02\times1000)^2=400$$
+
+        \item What are the expectation and variance of my annual return if I invest all my money in fund B?
+        $$E(R_B)=0.1(1000)=100$$
+        $$\n{Var}(R_B)=(0.03\times1000)^2=900$$
+
+        \item What are the expectation and variance of my total annual return if I invest half of my money in fund A and half in fund B?
+        $$E(R_T)=0.1(500)+0.1(500)=100$$
+        $$\n{Var}(R_T)=(0.02\times500)^2+(0.03\times500)^2=100+225=325$$
+        $$\sigma(R_T)=\sqrt{325}=18.03$$
+
+        \item Suppose I invest \$x in fund A and the rest of my money in fund B. What value of x minimizes the variance of my total annual return? Explain why your answers illustrate the importance of diversity in an investment strategy.\\
+        Let total return be
+        $$E(R_T) = 0.1x + 0.1(1000-x) = 0.1(1000) = 100$$
+        \begin{multline*}
+            \n{Var}(R_T) = (0.02x)^2 + (0.03(1000-x))^2=\frac{x^2}{1/0.0004} + \frac{(1000-x)^2}{1/0.0009}\\
+            \overset{AM-GM}{\ge} \frac{(x+1000-x)^2}{1/0.0004+1/0.0009}=\frac{3600}{13}
+        \end{multline*}
+        Equality happens iff
+        $$\frac{x}{1/0.0004} = \frac{1000-x}{1/0.0009} \Rightarrow 0.0004x = 0.0009(1000-x)\Rightarrow x=0.9/0.0013\approx692.3076923077$$
+
+        This shows the importance of diversification to reduces total risk (variance).
+    \end{enumerate}
+
+    \item Suppose that the random variable X has a probability density function $f(x)=2x$ for $0 \le x \le 1$. Find the probability density function and the expectation of the random variable Y in the following cases.
+    \begin{enumerate}
+        \item $Y=X^3$\\
+        \textbf{Note: } Since $Y$ is monotonic for all of these cases, $f_Y(y)=f_X(x)\left|\frac{dx}{dy}\right|$\\
+        Let $x=y^{1/3}$, then $\frac{dx}{dy}=\frac{1}{3}y^{-2/3}$
+        $$f_Y(y)=f_X(y^{1/3})\left|\frac{dx}{dy}\right|=2y^{1/3}\frac{1}{3}y^{-2/3}=\frac{2}{3}y^{-1/3}, \quad 0\le y\le1$$
+        $$E(Y)=\int_0^1 y f_Y(y)\,dy=\int_0^1 y\frac{2}{3}y^{-1/3}\,dy=\frac{2}{3}\int_0^1 y^{2/3}\,dy=\frac{2}{3}\times\frac{3}{5}= \frac{2}{5}$$
+
+        \item $Y=\sqrt{X}$\\
+        Let $x=y^2$, then $\frac{dx}{dy}=2y$
+        $$f_Y(y)=f_X(y^2)|2y|=2y^2(2y)=4y^3, \quad 0\le y\le1$$
+        $$E(Y)=\int_0^1 y(4y^3)\,dy=4\int_0^1 y^4\,dy=\frac{4}{5}$$
+
+        \item $Y=\frac{1}{1+x}$\\
+        Let $x=\frac{1-y}{y}$, then $\frac{dx}{dy}=-\frac{1}{y^2}$
+        $$f_Y(y)=f_X\left(\frac{1-y}{y}\right)\left|\frac{dx}{dy}\right|=2\left(\frac{1-y}{y}\right)\frac{1}{y^2}=\frac{2(1-y)}{y^3}, \quad \frac{1}{2}\le y\le1$$
+        \begin{multline*}
+            E(Y)=\int_{1/2}^{1} y\frac{2(1-y)}{y^3}\,dy=2\int_{1/2}^{1}\frac{1-y}{y^2}\,dy=2\left(\int_{1/2}^{1}\frac{1}{y^2}-\frac{1}{y}\,dy\right)\\
+            =2\left.(-y^{-1}-\ln y)\right|_{y=1/2}^{y=1}=2(-1-(-2)-\ln2)=2-2\ln2
+        \end{multline*}
+
+        \item $Y=2^X$\\
+        Let $x=\log_2 y$, then $\frac{dx}{dy}=\frac{1}{y\ln2}$
+        $$f_Y(y)=f_X\left(\log_2{y}\right)\left|\frac{dx}{dy}\right|=f_X(\log_2 y)\frac{1}{y\ln2}=\frac{2\log_2 y}{y\ln2}, \quad 1\le y\le2$$
+        \begin{multline*}
+            E(Y)=\int_1^2 y\frac{2\log_2 y}{y\ln2}\,dy=\frac{2}{\ln2}\int_1^2 \log_2 y\,dy=\frac{2}{(\ln2)^2}\left.(y\ln y - y)\right|_{y=1}^{y=2}\\
+            =\frac{2}{(\ln2)^2}(2\ln2 - 1)
+        \end{multline*}
+    \end{enumerate}
+\end{enumerate}

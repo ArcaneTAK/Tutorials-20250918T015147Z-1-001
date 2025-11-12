@@ -1,0 +1,71 @@
+\begin{enumerate}
+    \item Suppose that $X \sim U(-3, 8)$. Find:
+    \begin{enumerate}
+        \item $E(X)$
+        $$E(X)=\frac{a+b}{2}=\frac{-3+8}{2}=\frac{5}{2}=2.5$$
+
+        \item The standard deviation of $X$
+        $$\n{Var}(X)=\frac{(b-a)^2}{12}=\frac{(8-(-3))^2}{12}=\frac{121}{12}=10.0833$$
+        $$\sigma(X)=\sqrt{\n{Var}(X)}\approx3.17542648$$
+
+        \item $P(0\le X\le4)$
+        $$P(0\le X\le4)=\frac{4-0}{8-(-3)}=\frac{4}{11}$$
+    \end{enumerate}
+
+    \item A new battery supposedly with a charge of 1.5 volts actually has a voltage with a uniform distribution between 1.43 and 1.6 volts.
+    \begin{enumerate}
+        \item What is the expectation of the voltage?
+        $$E(X)=\frac{a+b}{2}=\frac{1.43+1.6}{2}=1.515$$
+
+        \item What is the standard deviation of the voltage?
+        $$\n{Var}(X)=\frac{(b-a)^2}{12}=\frac{(1.6-1.43)^2}{12}=\frac{0.17^2}{12}=0.00240833$$
+        $$\sigma(X)=\sqrt{\n{Var}}\approx0.04907477$$
+
+        \item What is the cumulative distribution function of the voltage?
+        \begin{equation*}
+            F(x) = \begin{cases}
+                0 & x<1.43\\
+                \dfrac{x-1.43}{0.17} & 1.43\le x\le 1.6\\
+                1 & x>1.6
+            \end{cases}
+        \end{equation*}
+
+        \item What is the probability that a battery has a voltage less than 1.48 volts?
+        $$P(X<1.48)=F(1.48)=\frac{1.48-1.43}{0.17}=5/17$$
+
+        \item If a box contains 50 batteries, what are the expectation and variance of the number of batteries in the box with a voltage less than 1.5 volts?\\
+        Probability of that the voltage of a battery is less than 1.5 $p=P(X<1.5)=\frac{1.5-1.43}{0.17}=\frac{0.07}{0.17}=7/17$\\
+        Let $N$ be the number of such batteries. Then $N\sim\n{B}(50,7/17)$
+        $$E(N)=np=50(7/17)=20.588235294$$
+        $$\n{Var}(N)=np(1-p)=50(7/17)(10/17)\approx12.1107266436$$
+    \end{enumerate}
+
+    \item Use integration by parts to show that if $X$ has an exponential distribution with parameter $\lambda$, then
+    \begin{enumerate}
+        \item $E(X)=\frac{1}{\lambda}$\\
+        Since $f(x)=\lambda e^{-\lambda x}$ for $x\ge0$,
+        $$E(X)=\int_0^\infty x\lambda e^{-\lambda x}\,dx=\left.-xe^{-\lambda x}\right|_0^\infty-\int_0^\infty -e^{-\lambda x}\,dx=0-\left.\frac{e^{-\lambda x}}{\lambda}\right|_0^\infty=\frac{1}{\lambda}=\frac{1}{\lambda}$$
+
+        \item $E(X^2)=\frac{2}{\lambda^2}$
+        $$E(X^2)=\int_0^\infty x^2\lambda e^{-\lambda x}\,dx=\left.-x^2 e^{-\lambda x}\right|_{0}^{\infty}+2\int_0^\infty x e^{-\lambda x}\,dx=\frac{2E(X)}{\lambda}=\frac{2}{\lambda^2}$$
+    \end{enumerate}
+
+    \item Suppose that you are waiting for a friend to call you and that the time you wait in minutes has an exponential distribution with parameter $\lambda=0.1$.
+    \begin{enumerate}
+        \item What is the expectation of your waiting time?
+        $$E(X)=\frac{1}{\lambda}=\frac{1}{0.1}=10$$
+
+        \item What is the probability that you will wait longer than 10 minutes?
+        $$P(X>10)=1-(1-e^{-10\lambda})=e^{-1}=0.367879$$
+
+        \item What is the probability that you will wait less than 5 minutes?
+        $$P(X<5)=1-e^{-5\lambda}=1-e^{-0.5}=1-0.6065=0.3935$$
+
+        \item Suppose that after 5 minutes, you are still waiting for the call. What is the distribution of your additional waiting time?
+        $$P(X>15|X>5)=\frac{P(X>15)}{P(X>5)}=\frac{e^{-15\lambda}}{e^{-5\lambda}}=e^{-10\lambda}=0.367879$$
+
+        \item Suppose now that the time you wait in minutes for the call has $U(0,20)$ distribution. What is the expectation of your waiting time? If after 5 minutes you are still waiting for the call, what is the distribution of your additional waiting time?
+        $$E(X)=\frac{0+20}{2}=10$$
+        The conditional distribution of additional waiting time is $Y=X-5$ for $5\le X\le 20$ or $Y\sim U(0,15)$.
+    \end{enumerate}
+\end{enumerate}
