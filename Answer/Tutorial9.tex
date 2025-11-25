@@ -28,15 +28,15 @@
         \item What is the variance in your profit from each game? If you are playing a game in which you have positive expected winnings, would you prefer a small or a large variance in the winnings?\\
         The expected loss is:
         $$E(X) = 0\times\frac{1}{6}+1\times\frac{5}{18}+2\times\frac{2}{9}+3\times\frac{1}{6}+4\times\frac{1}{9}+5\times\frac{1}{18} = \frac{35}{18} \approx 1.944$$
-        $$\n{Var}(X) = 0^2\times\frac{1}{6}+1^2\times\frac{5}{18}+2^2\times\frac{2}{9}+3^2\times\frac{1}{6}+4^2\times\frac{1}{9}+5^2\times\frac{1}{18}=\frac{35}{6}\approx5.83$$
+        $$\n{Var}(X) = 0^2\times\frac{1}{6}+1^2\times\frac{5}{18}+2^2\times\frac{2}{9}+3^2\times\frac{1}{6}+4^2\times\frac{1}{9}+5^2\times\frac{1}{18}-\left(\frac{35}{18}\right)^2=\frac{665}{324}\approx 2.0524691358$$
         If the expected value is the same, I would you prefer a small variance in the winnings.
         \item If you fix the dice so that each die has a probability of 0.2 of scoring a 3 and equal probability of 0.16 of scoring the other five numbers, do your expected winnings increase beyond 6 cents per game? Is it a surprise?
         \begin{align*}
             P(\n{diff}=0)=5(0.16^2)+0.2^2=0.168\\
             P(\n{diff}=1)=2(3(0.16\times0.16)+2(0.16\times0.2))=0.2816\\
             P(\n{diff}=2)=2(2(0.16\times0.2)+2(0.16\times0.16)) =0.2304\\
-            P(\n{diff}=3)=2(2(0.16\times0.16)+1(0.16\times0.2))=0.1664\\
-            P(\n{diff}=4)=2(2(0.16\times0.16)=2(0.0256))=0.1024 \\
+            P(\n{diff}=3)=2(2(0.16\times0.16)+(0.16\times0.2))=0.1664\\
+            P(\n{diff}=4)=4(0.16\times0.16)=0.1024\\
             P(\n{diff}=5)=2(0.16\times0.16)=0.0512\\
         \end{align*}
         Hence the expected loss is:
